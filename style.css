@@ -1,0 +1,135 @@
+:root {
+  --color-font-heading: #1ce31c;
+  --color-font: #1ce31c;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+#welcomeScreen {
+  border: 2px solid var(--color-font-heading);
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  width: 40%;
+  height: 45%;
+  max-width: 650px;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  color: var(--color-font-heading);
+}
+
+h1,
+p {
+  margin: 5px 0;
+}
+
+p {
+  font-size: 16px;
+}
+
+input {
+  width: 80%;
+  height: 1.5rem;
+  padding: 12px 10px;
+  margin: 10px;
+  color: #ff0000;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: black;
+  border: 1px solid #4e4949;
+}
+
+input::placeholder {
+  color: #ec0e0e;
+  font-weight: 500;
+}
+
+#btnSection {
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  padding: 0px 0px 15px 0;
+}
+
+.btn {
+  padding: 5px 15px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-right: 5px;
+  border: none;
+}
+
+#startHackBtn {
+  color: #ae2929;
+  background-color: #000000;
+  border: 1px solid red;
+}
+
+#stopHackBtn {
+  display: none;
+}
+
+.disabledBtn {
+  border: 1px solid #4f4f4f;
+  cursor: not-allowed;
+  color: grey;
+  background-color: #4f4f4f;
+}
+
+.activeBtn:active {
+  transform: translateY(2px);
+}
+
+#hackingStatus {
+  border: 2px solid var(--color-font);
+  display: none;
+  width: 100%;
+  height: 20vh;
+  padding: 10px;
+  position: relative;
+  color: var(--color-font);
+}
+
+#progressBar {
+  width: 100%;
+  height: 10px;
+  padding: 1px;
+  border: 4px inset #1ce31c;
+  animation-name: progress;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+#warningDiv {
+  border: 2px solid red;
+  padding: 15px;
+  position: absolute;
+  top: 50%;
+  width: 80%;
+  color: red;
+  background: rgb(0, 0, 0);
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>HackerMan Shan</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <canvas id="binaryRainDrop"></canvas>
+    <div id="welcomeScreen">
+        <h2 class="text-color" id="welcomeHeading">Welcome to the world of Hacking!</h2>
+        <p id="welcomePara" class="text-color">Enter the target's name you wish to hack.</p>
+        <input id="target" type="text" name="target" placeholder="Enter target's name" value="" autocomplete="off">
+        <div id="btnSection">
+            <button id="startHackBtn" class="btn">Start Hacking</button>
+            <button id="stopHackBtn" class="btn">Stop Hacking</button>
+            <button id="resetBtn" class="btn disabledBtn">Reset</button>
+        </div>
+        <div id="hackingStatus">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
