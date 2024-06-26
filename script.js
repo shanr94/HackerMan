@@ -5,6 +5,8 @@ const container = document.getElementById("hackingStatus");
 const welcomeScreen = document.getElementById("welcomeScreen");
 const welcomeHeading = document.getElementById("welcomeHeading");
 const welcomePara = document.getElementById("welcomePara");
+let windowWidth = 0;
+let windowHeight = 0;
 
 let target;
 let isHacking = false;
@@ -14,13 +16,12 @@ let currentValue = "";
 let hackingTimerID;
 let rainDropInterval;
 
-const createRainDropEffect = (rainDropColor, width, height) => {
+const createRainDropEffect = (rainDropColor) => {
   clearInterval(rainDropInterval);
-  console.log("from createRainDropEffect, ", rainDropColor);
   const canvas = document.getElementById("binaryRainDrop");
   const context = canvas.getContext("2d");
-  canvas.width = width;
-  canvas.height = height;
+  canvas.width = windowWidth;
+  canvas.height = windowHeight;
   const binary = "01";
 
   const fontSize = 16;
@@ -53,9 +54,9 @@ const createRainDropEffect = (rainDropColor, width, height) => {
 };
 
 const getWindowSize = () => {
-  width = window.innerWidth;
-  height = window.innerHeight;
-  createRainDropEffect("#1ce31c", width, height);
+  windowWidth = window.innerWidth;
+  windowHeight = window.innerHeight;
+  createRainDropEffect("#1ce31c");
 };
 
 window.onload = getWindowSize;
